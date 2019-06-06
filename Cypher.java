@@ -34,10 +34,16 @@ public class Cypher {
 				System.out.println("3. ROT10");
 				System.out.println("4. Abtash");
 				System.out.println("5. Ceaser");
+				System.out.println("6. Phone");
+				System.out.println("7. Morse");
 				System.out.print("Enter a Number: ");
 				type = Integer.parseInt(br.readLine());
 				System.out.println();
-			
+				
+				if (type == 7 && proc == 2) {
+					System.out.println("When decrypting Morse code,");
+					System.out.println("add a / between words and a space between letters\n");
+				}
 				System.out.print("Enter the data to encrypt/decrypt: ");
 				text = br.readLine();
 				System.out.println();
@@ -71,7 +77,16 @@ public class Cypher {
 						if (proc == 1) { result = code5.Ceaser_encrypt(text); }
 						if (proc == 2) { result = code5.Ceaser_decrypt(text); }
 						break;
-						
+					case 6:
+						Phone code6 = new Phone();
+						if (proc == 1) { result = code6.Phone_encrypt(text); }
+						if (proc == 2) { result = code6.Phone_decrypt(text); }
+						break;
+					case 7:
+						Morse code7 = new Morse();
+						if (proc == 1) { result = code7.Morse_encrypt(text); }
+						if (proc == 2) { result = code7.Morse_decrypt(text); }
+						break;
 				}
 				System.out.println("Result: " + result + "\n");
 				
