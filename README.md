@@ -15,3 +15,5 @@ java LastCipher
 - Ceaser
 - Phone
 - Morse
+- Qwerty
+- Vigenere
