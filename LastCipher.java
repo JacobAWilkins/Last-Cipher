@@ -1,3 +1,20 @@
+/*H****************************************************************
+* FILENAME :        LastCipher.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using various methods 
+*
+* NOTES :
+*       First, pick encrypt or decrypt
+*       Second, pick cipher type
+*       Lastly, type your text
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    5 Jun 19
+*
+*H*/
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
