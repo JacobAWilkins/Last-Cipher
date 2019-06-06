@@ -34,29 +34,40 @@ public class Cypher {
 			
 			try {
 				
-				System.out.println("1. Encrypt");
-				System.out.println("2. Decrypt");
-				System.out.println("3. Quit");
-				System.out.print("Enter a Number: ");
-				proc = Integer.parseInt(br.readLine());
-				System.out.println();
+				while(true) {
+					System.out.println("1. Encrypt");
+					System.out.println("2. Decrypt");
+					System.out.println("3. Quit");
+					System.out.print("Enter a Number: ");
+					proc = Integer.parseInt(br.readLine());
+					System.out.println();
+					if (proc < 1 || proc > 3) {
+						System.out.println("Number must be between 1-3\n");
+					} else { break; }
+				}
 				
 				if (proc == 3) {
 					System.out.println("Exiting...");
 					System.exit(0);
 				}
-			
-				System.out.println("1. A1Z26");
-				System.out.println("2. Blowfish");
-				System.out.println("3. ROT10");
-				System.out.println("4. Abtash");
-				System.out.println("5. Ceaser");
-				System.out.println("6. Phone");
-				System.out.println("7. Morse");
-				System.out.println("8. Qwerty");
-				System.out.print("Enter a Number: ");
-				type = Integer.parseInt(br.readLine());
-				System.out.println();
+				
+				while (true) {
+					System.out.println("1. A1Z26");
+					System.out.println("2. Blowfish");
+					System.out.println("3. ROT10");
+					System.out.println("4. Abtash");
+					System.out.println("5. Ceaser");
+					System.out.println("6. Phone");
+					System.out.println("7. Morse");
+					System.out.println("8. Qwerty");
+					System.out.println("9. Vigenere");
+					System.out.print("Enter a Number: ");
+					type = Integer.parseInt(br.readLine());
+					System.out.println();
+					if (type < 1 || type > 9) {
+						System.out.println("Number must be between 1-9\n");
+					} else { break; }
+				}
 				
 				if (type == 7 && proc == 2) {
 					System.out.println("When decrypting Morse code,");
@@ -110,6 +121,15 @@ public class Cypher {
 						Qwerty code8 = new Qwerty();
 						if (proc == 1) { result = code8.Qwerty_encrypt(text); }
 						if (proc == 2) { result = code8.Qwerty_decrypt(text); }
+						break;
+					case 9:
+						System.out.print("Enter a key: ");
+						String key1 = br.readLine();
+						System.out.println();
+						
+						Vigenere code9 = new Vigenere();
+						if (proc == 1) { result = code9.Vigenere_encrypt(text, key1); }
+						if (proc == 2) { result = code9.Vigenere_decrypt(text, key1); }
 						break;
 				}
 				
