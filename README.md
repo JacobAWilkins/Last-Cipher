@@ -13,3 +13,5 @@ java Cypher
 - ROT10
 - Abtash
 - Ceaser
+- Phone
+- Morse
