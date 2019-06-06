@@ -32,6 +32,8 @@ public class Cypher {
 				System.out.println("1. A1Z26");
 				System.out.println("2. Blowfish");
 				System.out.println("3. ROT10");
+				System.out.println("4. Abtash");
+				System.out.println("5. Ceaser");
 				System.out.print("Enter a Number: ");
 				type = Integer.parseInt(br.readLine());
 				System.out.println();
@@ -59,7 +61,17 @@ public class Cypher {
 						ROT10 code3 = new ROT10();
 						result = code3.ROT10_encrypt(text);
 						break;
-					
+					case 4:
+						Abtash code4 = new Abtash();
+						if (proc == 1) { result = code4.Abtash_encrypt(text); }
+						if (proc == 2) { result = code4.Abtash_decrypt(text); }
+						break;
+					case 5:
+						Ceaser code5 = new Ceaser();
+						if (proc == 1) { result = code5.Ceaser_encrypt(text); }
+						if (proc == 2) { result = code5.Ceaser_decrypt(text); }
+						break;
+						
 				}
 				System.out.println("Result: " + result + "\n");
 				
