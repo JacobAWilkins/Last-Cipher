@@ -19,7 +19,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class LastCipher {
+public class Cypher {
 	
 	public static void main(String[] args) throws Exception, IOException {
 		
@@ -53,6 +53,7 @@ public class LastCipher {
 				System.out.println("5. Ceaser");
 				System.out.println("6. Phone");
 				System.out.println("7. Morse");
+				System.out.println("8. Qwerty");
 				System.out.print("Enter a Number: ");
 				type = Integer.parseInt(br.readLine());
 				System.out.println();
@@ -61,6 +62,7 @@ public class LastCipher {
 					System.out.println("When decrypting Morse code,");
 					System.out.println("add a / between words and a space between letters\n");
 				}
+				
 				System.out.print("Enter the data to encrypt/decrypt: ");
 				text = br.readLine();
 				System.out.println();
@@ -104,11 +106,19 @@ public class LastCipher {
 						if (proc == 1) { result = code7.Morse_encrypt(text); }
 						if (proc == 2) { result = code7.Morse_decrypt(text); }
 						break;
+					case 8:
+						Qwerty code8 = new Qwerty();
+						if (proc == 1) { result = code8.Qwerty_encrypt(text); }
+						if (proc == 2) { result = code8.Qwerty_decrypt(text); }
+						break;
 				}
+				
 				System.out.println("Result: " + result + "\n");
 				
 			} catch (IOException ioe) {
-				System.out.println("Error reading data..");
+				
+				System.out.println("Error reading data...");
+				
 			}
 			
 		}
