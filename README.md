@@ -1,10 +1,10 @@
-# Cypher
+# Last Cipher
 Encrypts and decrypts text using various encryption methods
 
 ### Compile and Run
 ```
-javac Cypher.java
-java Cypher
+javac LastCipher.java
+java LastCipher
 ```
 
 ### Methods supported so far
