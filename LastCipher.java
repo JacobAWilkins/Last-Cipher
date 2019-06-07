@@ -19,7 +19,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Cypher {
+public class LastCipher {
 	
 	public static void main(String[] args) throws Exception, IOException {
 		
@@ -61,11 +61,12 @@ public class Cypher {
 					System.out.println("7. Morse");
 					System.out.println("8. Qwerty");
 					System.out.println("9. Vigenere");
+					System.out.println("10. AES");
 					System.out.print("Enter a Number: ");
 					type = Integer.parseInt(br.readLine());
 					System.out.println();
-					if (type < 1 || type > 9) {
-						System.out.println("Number must be between 1-9\n");
+					if (type < 1 || type > 10) {
+						System.out.println("Number must be between 1-10\n");
 					} else { break; }
 				}
 				
@@ -85,7 +86,7 @@ public class Cypher {
 						if (proc == 2) { result = code1.A1Z26_decrypt(text); }
 						break;
 					case 2:
-						System.out.print("Enter a secret: ");
+						System.out.print("Enter a key: ");
 						String pass2 = br.readLine();
 						System.out.println();
 						
@@ -130,6 +131,15 @@ public class Cypher {
 						Vigenere code9 = new Vigenere();
 						if (proc == 1) { result = code9.Vigenere_encrypt(text, key1); }
 						if (proc == 2) { result = code9.Vigenere_decrypt(text, key1); }
+						break;
+					case 10:
+						System.out.print("Enter a key (must be 16 characters): ");
+						String key2 = br.readLine();
+						System.out.println();
+						
+						AES code10 = new AES();
+						if (proc == 1) { result = code10.AES_encrypt(text, key2); }
+						if (proc == 2) { result = code10.AES_decrypt(text, key2); }
 						break;
 				}
 				
