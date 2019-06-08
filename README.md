@@ -1,5 +1,5 @@
 # Last Cipher
-Encrypts and decrypts text using various encryption methods
+Encrypts and decrypts text using 10 different encryption methods
 
 ### Compile and Run
 ```
