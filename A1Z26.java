@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        A1Z26.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using A1Z26 cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    5 Jun 19
+*
+*H*/
+
 public class A1Z26 {
 	
 	public static String A1Z26_encrypt(String text) {
