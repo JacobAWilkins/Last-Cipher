@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        Morse.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using Morse cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    6 Jun 19
+*
+*H*/
+
 public class Morse {
 	
 	public static String Morse_encrypt(String text) {
