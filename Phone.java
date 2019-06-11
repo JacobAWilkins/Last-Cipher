@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        Phone.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using Phone cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    6 Jun 19
+*
+*H*/
+
 public class Phone {
 	
 	public static String Phone_encrypt(String text) {
