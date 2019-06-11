@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        ROT10.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using ROT10 cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    6 Jun 19
+*
+*H*/
+
 public class ROT10 {
 	
 	public static String ROT10_encrypt(String text) {
