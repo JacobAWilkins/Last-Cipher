@@ -18,3 +18,9 @@ java LastCipher
 - Qwerty
 - Vigenere
 - AES
+
+### Instructions
+1. Select Encrypt or Decrypt
+2. Select Cipher
+3. Type in data to be encrypted/decrypted
+4. (optional) Type in key if needed
