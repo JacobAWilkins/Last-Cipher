@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        AES.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using AES cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    6 Jun 19
+*
+*H*/
+
 import javax.crypto.spec.SecretKeySpec;
 import javax.crypto.Cipher;
 import java.util.Base64;
