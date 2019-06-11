@@ -1,3 +1,15 @@
+/*H****************************************************************
+* FILENAME :        Blowfish.java
+*
+* DESCRIPTION :
+*       Encrypts and decrpyts text using Blowfish cipher 
+*
+*       Copyright 2019, Jacob Wilkins.  All rights reserved.
+* 
+* AUTHOR :    Jacob Wilkins        START DATE :    5 Jun 19
+*
+*H*/
+
 import javax.crypto.spec.SecretKeySpec;
 import javax.crypto.Cipher;
 import java.util.Base64;
