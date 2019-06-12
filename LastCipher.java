@@ -20,20 +20,20 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 public class LastCipher {
-	
+
 	public static void main(String[] args) throws Exception, IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		boolean bool = true;
 		int proc;
 		int type;
 		String text;
 		String result = "";
-		
+
 		while(bool) {
-			
+
 			try {
-				
+
 				while(true) {
 					System.out.println("1. Encrypt");
 					System.out.println("2. Decrypt");
@@ -45,12 +45,12 @@ public class LastCipher {
 						System.out.println("Number must be between 1-3\n");
 					} else { break; }
 				}
-				
+
 				if (proc == 3) {
 					System.out.println("Exiting...");
 					System.exit(0);
 				}
-				
+
 				while (true) {
 					System.out.println("1. A1Z26");
 					System.out.println("2. Blowfish");
@@ -62,23 +62,24 @@ public class LastCipher {
 					System.out.println("8. Qwerty");
 					System.out.println("9. Vigenere");
 					System.out.println("10. AES");
+					System.out.println("11. Baconian");
 					System.out.print("Enter a Number: ");
 					type = Integer.parseInt(br.readLine());
 					System.out.println();
-					if (type < 1 || type > 10) {
-						System.out.println("Number must be between 1-10\n");
+					if (type < 1 || type > 11) {
+						System.out.println("Number must be between 1-11\n");
 					} else { break; }
 				}
-				
+
 				if (type == 7 && proc == 2) {
 					System.out.println("When decrypting Morse code,");
 					System.out.println("add a / between words and a space between letters\n");
 				}
-				
+
 				System.out.print("Enter the data to encrypt/decrypt: ");
 				text = br.readLine();
 				System.out.println();
-			
+
 				switch (type) {
 					case 1:
 						A1Z26 code1 = new A1Z26();
@@ -89,7 +90,7 @@ public class LastCipher {
 						System.out.print("Enter a key: ");
 						String pass2 = br.readLine();
 						System.out.println();
-						
+
 						Blowfish code2 = new Blowfish();
 						if (proc == 1) { result = code2.Blowfish_encrypt(text, pass2); }
 						if (proc == 2) { result = code2.Blowfish_decrypt(text, pass2); }
@@ -127,7 +128,7 @@ public class LastCipher {
 						System.out.print("Enter a key: ");
 						String key1 = br.readLine();
 						System.out.println();
-						
+
 						Vigenere code9 = new Vigenere();
 						if (proc == 1) { result = code9.Vigenere_encrypt(text, key1); }
 						if (proc == 2) { result = code9.Vigenere_decrypt(text, key1); }
@@ -136,23 +137,28 @@ public class LastCipher {
 						System.out.print("Enter a key (must be 16 characters): ");
 						String key2 = br.readLine();
 						System.out.println();
-						
+
 						AES code10 = new AES();
 						if (proc == 1) { result = code10.AES_encrypt(text, key2); }
 						if (proc == 2) { result = code10.AES_decrypt(text, key2); }
 						break;
+					case 11:
+						Baconian code11 = new Baconian();
+						if (proc == 1) { result = code11.Baconian_encrypt(text); }
+						if (proc == 2) { result = code11.Baconian_decrypt(text); }
+						break;
 				}
-				
+
 				System.out.println("Result: " + result + "\n");
-				
+
 			} catch (IOException ioe) {
-				
+
 				System.out.println("Error reading data...");
-				
+
 			}
-			
+
 		}
-		
+
 	}
-	
+
 }
