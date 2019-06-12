@@ -15,14 +15,14 @@ import java.util.Base64;
 public class base64 {
 
   public static String Base64_encrypt(String text) {
-  
-		return Base64.getEncoder().encodeToString(text.getBytes());
+	  
+	  return Base64.getEncoder().encodeToString(text.getBytes());
     
 	}
 
 	public static String Base64_decrypt(String text) {
-  
-    byte[] result = Base64.getDecoder().decode(text);
+		
+		byte[] result = Base64.getDecoder().decode(text);
 		return new String(result);
     
 	}
