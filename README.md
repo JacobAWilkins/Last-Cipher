@@ -18,6 +18,7 @@ java LastCipher
 - Qwerty
 - Vigenere
 - AES
+- Baconian
 
 ### Instructions
 1. Select Encrypt or Decrypt
