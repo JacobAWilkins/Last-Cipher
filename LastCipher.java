@@ -63,11 +63,12 @@ public class LastCipher {
 					System.out.println("9. Vigenere");
 					System.out.println("10. AES");
 					System.out.println("11. Baconian");
+					System.out.println("12. Base64");
 					System.out.print("Enter a Number: ");
 					type = Integer.parseInt(br.readLine());
 					System.out.println();
-					if (type < 1 || type > 11) {
-						System.out.println("Number must be between 1-11\n");
+					if (type < 1 || type > 12) {
+						System.out.println("Number must be between 1-12\n");
 					} else { break; }
 				}
 
@@ -146,6 +147,11 @@ public class LastCipher {
 						Baconian code11 = new Baconian();
 						if (proc == 1) { result = code11.Baconian_encrypt(text); }
 						if (proc == 2) { result = code11.Baconian_decrypt(text); }
+						break;
+					case 12:
+						base64 code12 = new base64();
+						if (proc == 1) { result = code12.Base64_encrypt(text); }
+						if (proc == 2) { result = code12.Base64_decrypt(text); }
 						break;
 				}
 
