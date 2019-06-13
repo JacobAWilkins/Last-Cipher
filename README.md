@@ -7,7 +7,7 @@ javac LastCipher.java
 java LastCipher
 ```
 
-### Methods supported so far
+### Methods
 - A1Z26
 - Blowfish
 - ROT10
