@@ -55,31 +55,31 @@ public class Ceaser {
 		for (int i = 0; i < text.length(); i++) {
 			char character = text.charAt(i);
 			if (character == 'x') { result = result + "a"; }
-			else if (character == 'y') { result = result + "b"; }
-			else if (character == 'z') { result = result + "c"; }
-			else if (character == 'a') { result = result + "d"; }
-			else if (character == 'b') { result = result + "e"; }
-			else if (character == 'c') { result = result + "f"; }
-			else if (character == 'd') { result = result + "g"; }
-			else if (character == 'e') { result = result + "h"; }
-			else if (character == 'f') { result = result + "i"; }
-			else if (character == 'g') { result = result + "j"; }
-			else if (character == 'h') { result = result + "k"; }
-			else if (character == 'i') { result = result + "l"; }
-			else if (character == 'j') { result = result + "m"; }
-			else if (character == 'k') { result = result + "n"; }
-			else if (character == 'l') { result = result + "o"; }
-			else if (character == 'm') { result = result + "p"; }
-			else if (character == 'n') { result = result + "q"; }
-			else if (character == 'o') { result = result + "r"; }
-			else if (character == 'p') { result = result + "s"; }
-			else if (character == 'q') { result = result + "t"; }
-			else if (character == 'r') { result = result + "u"; }
-			else if (character == 's') { result = result + "v"; }
-			else if (character == 't') { result = result + "w"; }
-			else if (character == 'u') { result = result + "x"; }
-			else if (character == 'v') { result = result + "y"; }
-			else if (character == 'w') { result = result + "z"; }
+			else if (character == 'y') { result += "b"; }
+			else if (character == 'z') { result += "c"; }
+			else if (character == 'a') { result += "d"; }
+			else if (character == 'b') { result += "e"; }
+			else if (character == 'c') { result += "f"; }
+			else if (character == 'd') { result += "g"; }
+			else if (character == 'e') { result += "h"; }
+			else if (character == 'f') { result += "i"; }
+			else if (character == 'g') { result += "j"; }
+			else if (character == 'h') { result += "k"; }
+			else if (character == 'i') { result += "l"; }
+			else if (character == 'j') { result += "m"; }
+			else if (character == 'k') { result += "n"; }
+			else if (character == 'l') { result += "o"; }
+			else if (character == 'm') { result += "p"; }
+			else if (character == 'n') { result += "q"; }
+			else if (character == 'o') { result += "r"; }
+			else if (character == 'p') { result += "s"; }
+			else if (character == 'q') { result += "t"; }
+			else if (character == 'r') { result += "u"; }
+			else if (character == 's') { result += "v"; }
+			else if (character == 't') { result += "w"; }
+			else if (character == 'u') { result += "x"; }
+			else if (character == 'v') { result += "y"; }
+			else if (character == 'w') { result += "z"; }
 			else { result = result + String.valueOf(character); }
 			
 		}
